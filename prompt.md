@@ -10,11 +10,4 @@ Here is information about general terms for trips by bus and airplane.
 I have a userid 1, do a booking of trip to Bratislava at 12 Feb 2024 by bus.
 
 
-Say hi to our wonderful AWS User Group in Prague! 
-
-What is Amazon Bedrock? 
-
-
-bedrock-knowledge-base-demo-ug
-
 
