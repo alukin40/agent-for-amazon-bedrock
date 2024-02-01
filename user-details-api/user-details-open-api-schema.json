@@ -1,0 +1,50 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "User Details API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/getUserDetails/{userId}": {
+        "get": {
+          "summary": "Get user name and surname",
+          "description": "Retrieves user name and surname based on provided userID",
+          "parameters": [
+            {
+              "name": "userId",
+              "in": "path",
+              "description": "Unique identifier of the user.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response with user details",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "surname": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "User not found"
+            }
+          }
+        }
+      }        
+    }
+}
+  

@@ -1,0 +1,62 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Booking API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/bookTrip": {
+        "post": {
+          "summary": "Book a trip",
+          "description": "Allows a user to book a trip by providing necessary details.",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "surname": {
+                      "type": "string"
+                    },
+                    "date_of_trip": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "transport_type": {
+                      "type": "string"
+                    },
+                    "destination": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "surname", "date_of_trip", "transport_type", "destination"]
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Booking confirmation response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "body": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
